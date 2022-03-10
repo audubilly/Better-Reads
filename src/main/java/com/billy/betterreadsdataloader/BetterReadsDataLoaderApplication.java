@@ -13,14 +13,20 @@ import java.nio.file.Path;
 @EnableConfigurationProperties(DataStaxAstraProperties.class)
 public class BetterReadsDataLoaderApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BetterReadsDataLoaderApplication.class, args);
-	}
 
-	@Bean
-	public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties){
-		Path bundle = astraProperties.getSecureConnectBundle().toPath();
-		return builder -> builder.withCloudSecureConnectBundle(bundle);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BetterReadsDataLoaderApplication.class, args);
+
+    }
+
+
+    @Bean
+    public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties) {
+        Path bundle = astraProperties.getSecureConnectBundle().toPath();
+        return builder -> builder.withCloudSecureConnectBundle(bundle);
+    }
 
 }
+
+
+

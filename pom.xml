@@ -15,12 +15,58 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<spring.framework.version>5.3.16</spring.framework.version>
+
+<!--		&lt;!&ndash; Cassandra driver &ndash;&gt;-->
+<!--		<cassandra-java-driver.version>4.8.0</cassandra-java-driver.version>-->
+<!--		<cassandra-native-protocol.version>1.4.11</cassandra-native-protocol.version>-->
+
+		<springfox.version>3.0.0</springfox.version>
+
 	</properties>
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-cassandra</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.datastax.oss</groupId>
+			<artifactId>java-driver-core</artifactId>
+			<version>4.13.0</version>
+		</dependency>
+
+<!--		&lt;!&ndash; Cassandra driver &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>com.datastax.oss</groupId>-->
+<!--			<artifactId>java-driver-core</artifactId>-->
+<!--			<version>${cassandra-java-driver.version}</version>-->
+<!--			&lt;!&ndash; exclude Tinkerpop dependencies to remove groovy warning on Java 11 &ndash;&gt;-->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.apache.tinkerpop</groupId>-->
+<!--					<artifactId>*</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>com.datastax.oss</groupId>-->
+<!--			<artifactId>native-protocol</artifactId>-->
+<!--			<version>${cassandra-native-protocol.version}</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
