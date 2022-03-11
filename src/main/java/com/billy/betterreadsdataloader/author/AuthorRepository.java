@@ -1,7 +1,5 @@
 package com.billy.betterreadsdataloader.author;
 
-
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.stereotype.Repository;
 

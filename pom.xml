@@ -17,14 +17,15 @@
 		<java.version>11</java.version>
 		<spring.framework.version>5.3.16</spring.framework.version>
 
-<!--		&lt;!&ndash; Cassandra driver &ndash;&gt;-->
-<!--		<cassandra-java-driver.version>4.8.0</cassandra-java-driver.version>-->
-<!--		<cassandra-native-protocol.version>1.4.11</cassandra-native-protocol.version>-->
-
-		<springfox.version>3.0.0</springfox.version>
+<!--		<springfox.version>3.0.0</springfox.version>-->
 
 	</properties>
 	<dependencies>
+<!--		<dependency>-->
+<!--			<groupId>javax.annotation</groupId>-->
+<!--			<artifactId>javax.annotation-api</artifactId>-->
+<!--			<version>1.3.2</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -48,25 +49,7 @@
 			<version>4.13.0</version>
 		</dependency>
 
-<!--		&lt;!&ndash; Cassandra driver &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>com.datastax.oss</groupId>-->
-<!--			<artifactId>java-driver-core</artifactId>-->
-<!--			<version>${cassandra-java-driver.version}</version>-->
-<!--			&lt;!&ndash; exclude Tinkerpop dependencies to remove groovy warning on Java 11 &ndash;&gt;-->
-<!--			<exclusions>-->
-<!--				<exclusion>-->
-<!--					<groupId>org.apache.tinkerpop</groupId>-->
-<!--					<artifactId>*</artifactId>-->
-<!--				</exclusion>-->
-<!--			</exclusions>-->
-<!--		</dependency>-->
 
-<!--		<dependency>-->
-<!--			<groupId>com.datastax.oss</groupId>-->
-<!--			<artifactId>native-protocol</artifactId>-->
-<!--			<version>${cassandra-native-protocol.version}</version>-->
-<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
