@@ -52,13 +52,4 @@ public class Author {
         this.personalName = personalName;
     }
 
-    @PostConstruct
-    public void start(){
-        System.out.println("Application Started");
-
-        Author author = new Author();
-        author.setPersonalName("name");
-        authorRepository.save(author);
-
-    }
 }

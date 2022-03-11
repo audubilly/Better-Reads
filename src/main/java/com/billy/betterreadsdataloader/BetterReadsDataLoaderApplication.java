@@ -21,17 +21,9 @@ import java.nio.file.Path;
 
 public class BetterReadsDataLoaderApplication {
 
-
-
-
-
     public static void main(String[] args) {
         SpringApplication.run(BetterReadsDataLoaderApplication.class, args);
-
-
-
     }
-
 
     @Bean
     public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties) {
