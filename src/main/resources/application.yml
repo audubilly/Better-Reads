@@ -9,13 +9,13 @@ spring:
       client:
         registration:
           github:
-            client-id: Iv1.70bba048e8e40741
-            client-secret: 4d0bd0d6a94717869c01d10a35b45427fcd66cdd
+            client-id: <client-id>
+            client-secret: <client secret>
   data:
     cassandra:
       keyspace-name: main
-      username: pajLdRvEdMdGvYZcNduUksiA
-      password: Hd7XR3fCUfIZiwWMOMNoMqFJ+JPUtMZoI1mXffR3qOeMcR0ib4dbWXijj9nhRUGaPU_kHxxbdZSzmHFrtwXA92+N364EmtoWUcQDRdYXjsOpB983mkHuI6_kDmvRRPcZ
+      username: <username>
+      password: <password>
       schema-action: create_if_not_exists
       request:
         timeout: 10s
@@ -28,8 +28,8 @@ datastax.astra:
 
 
 astra.db:
-    id: 268cf633-f4bf-44c0-9c7b-3340acd4d5a8-1
+    id: <db-id>
     region: us-east1
     keyspace: main
-    application:token: AstraCS:pajLdRvEdMdGvYZcNduUksiA:0baeb1503f0b9819a08753ca988271ea0558a6da5478aa2e723d7ccc9b979ec6
+    application:token: <Token>
 
