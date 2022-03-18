@@ -4,15 +4,13 @@ datadump.location:
  works: /Users/USER/Documents/test-works.txt
 
 spring:
-#  application:
-#    name: betterreads
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          github:
-#            client-id: Iv1.a9958b0f68563669
-#            client-secret: 41655317cc2302b59792654751682e7e6e2817cd
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Iv1.70bba048e8e40741
+            client-secret: 4d0bd0d6a94717869c01d10a35b45427fcd66cdd
   data:
     cassandra:
       keyspace-name: main
