@@ -21,7 +21,6 @@ import java.nio.file.Path;
 
 @EnableAsync
 @SpringBootApplication
-@RestController
 @EnableConfigurationProperties(DataStaxAstraProperties.class)
 
 public class BetterReadsDataLoaderApplication {
@@ -31,11 +30,11 @@ public class BetterReadsDataLoaderApplication {
     }
 
 
-    @RequestMapping("/user")
-    public String user(@AuthenticationPrincipal OAuth2User principal) {
-        System.out.println(principal);
-        return principal.getAttribute("name");
-    }
+//    @RequestMapping("/user")
+//    public String user(@AuthenticationPrincipal OAuth2User principal) {
+//        System.out.println(principal);
+//        return principal.getAttribute("name");
+//    }
 
     @Bean
     public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties) {
