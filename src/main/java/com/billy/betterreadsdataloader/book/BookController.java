@@ -15,11 +15,18 @@ public class BookController {
     @Autowired
     BooksRepository booksRepository;
 
+    private final String COVER_IMAGE = "https://covers.openlibrary.org/b/id/";
+
     @GetMapping(value = "/books/{bookId}")
     public String getBook(@PathVariable String bookId, Model model){
         Optional<Books> optionalBook = booksRepository.findById(bookId);
         if(optionalBook.isPresent()){
             Books books = optionalBook.get();
+            String coverImageUrl = "/images/no-image.png";
+            if(books.getCoverIds() != null & books.getCoverIds().size() > 0){
+                coverImageUrl = COVER_IMAGE + books.getCoverIds().get(0) + "-L.png";
+            }
+            model.addAttribute("coverImage",coverImageUrl);
             model.addAttribute("books",books);
             return "books";
         }
